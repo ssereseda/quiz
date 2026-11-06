@@ -36,6 +36,11 @@ def download(url):
 def main():
     source = DATA.read_text(encoding='utf-8')
     lots = json.loads(source.split('window.APARTMENTS =', 1)[1].strip().removesuffix(';'))
+    backup = ROOT / 'tools/photo-sources.json'
+    if backup.exists():
+        sources = {lot['url']: lot['photos'] for lot in json.loads(backup.read_text(encoding='utf-8'))}
+        for lot in lots:
+            lot['photos'] = sources.get(lot['url'], lot['photos'])
     urls = sorted({url for lot in lots for url in lot['photos'] if url.startswith('https://')})
     if not urls:
         print('All photos are already local.')
@@ -49,11 +54,13 @@ def main():
     paths = {url: path for url, path, error in results}
     failed = [error for _, _, error in results if error]
     for lot in lots:
-        lot['photos'] = [paths.get(url, url) for url in lot['photos']]
+        resolved = [paths.get(url, url) for url in lot['photos']]
+        lot['photos'] = [url for url in resolved if not url.startswith('https://')]
+        lot['pendingPhotos'] = [url for url in resolved if url.startswith('https://')]
     updated = DATA.with_suffix('.tmp')
     updated.write_text('// Объявления Суздаля из CSV пользователя. Цена за сутки.\nwindow.APARTMENTS = ' + json.dumps(lots, ensure_ascii=False, indent=2) + ';\n', encoding='utf-8')
     updated.replace(DATA)
-    print(f'Downloaded: {len(urls) - len(failed)}; failed: {len(failed)}. Failed images retain their original URLs.')
+    print(f'Downloaded: {len(urls) - len(failed)}; failed: {len(failed)}. Failed image URLs are saved in pendingPhotos and photo-sources.json.')
     if failed:
         print('First error:', failed[0])
         print('Check network access to *.img.avito.st, or retry on your computer.')
