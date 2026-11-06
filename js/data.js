@@ -1,0 +1,916 @@
+// Источник: CSV пользователя. Только адреса в городе Суздаль. Цена за сутки из выгрузки.
+window.APARTMENTS = [
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_45_m_3_krovati_4495052503?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://80.img.avito.st/image/1/1.FYC_17a-uWmpdxtombcGtrl2u28NYL1pDQfYYwHUuMsKdLs.aKN2GzXJtIEBJvoB7FYFaBupSwRSUJ7XL8KtIs2oXG8",
+      "https://30.img.avito.st/image/1/1.hCoyGra-KMMkuorCNgyQHDS7KsWArSzDgMpJyYwZKWGHuSo.X1U2mm4XPMo4hK5P5MvL2COOG0-WqhgxyERgpmiOufU?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://80.img.avito.st/image/1/1.aKP3-7a-xErhW2ZLq7oHlfFaxkxFTMBKRSulQEn4xehCWMY.-FlXQwEzjaSdUaxatkM4KHL9jJnsuGw2GIao75S5bzM",
+      "https://c80.img.avito.st/image/1/1.SpJ4-7a-5ntuW0R6YN4R7m5a5H3KTOJ7yiuHccb459nNWOQ.GI3VpC1-4RkuIq7jlB9nfxt2HYZeC1bHwLoIhcHDlgs",
+      "https://80.img.avito.st/image/1/1.DElhWra-oKB3-gKhdS4YMn37oqbT7aSg04rBqt9ZoQLU-aI.gLLVP7YnBnJOdibENXZZco8zQMqQWDO2iPgxB41bn9Y"
+    ],
+    "price": 5000,
+    "desc": "2-к. квартира, 45 м², 3 кровати",
+    "street": "Советская ул., 24"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_55_m_3_krovati_7955325919?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://50.img.avito.st/image/1/1.r8pDj7a-AyNVL6EiEYGc4QsuASXxOAcj8V9iKf2MAoH2LAE.MRHftxWK5XPybtZA98n0il8jo_DOhYDEeT3Q6TsUgvQ",
+      "https://20.img.avito.st/image/1/1.YOa1s7a-zA-jE24O-bYGhv4SzgkHBMgPB2OtBQuwza0AEM4.48LRQR5WfrZfJD22Oeg9lwazlLAD9nkquNJ7MrpkG3o?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://60.img.avito.st/image/1/1.lzoUgra-O9MCIpnSNpC2EFwjOdWmNT_TplJa2aqBOnGhITk.KdzAqZGojP7qD8FNYV3dgiOZZDNtRru3-w6ApfzeKMA",
+      "https://c80.img.avito.st/image/1/1.VVPl1La--brzdFu7w6kKGMJ0-7xXY_26VwSYsFvX-BhQd_s.PWBNdQcZFyE4YpcNcAcBewkKn1l4jgIBiKIh84tbaxo",
+      "https://00.img.avito.st/image/1/1.v_lrG7a-ExB9u7ERGWm4sEy7ERbZrBcQ2ctyGtUYErLeuBE.t8xrRHgmpTFLEXVGzb2i7zD3TpUDCKcsn4K4vXLHIe8?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 8900,
+    "desc": "2-к. квартира, 55 м², 3 кровати",
+    "street": "пер. Шевченко, 4"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_47_m_3_krovati_4191210519?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://c80.img.avito.st/image/1/1.AGYx-ba-rI8nWQ6OPdlXYTZZromDTqiPgynNhY_6rS2EWq4.JQ51C754CYitV2aqoEWn1z4mtqc4KyqWeIp5SG3GkR0",
+      "https://70.img.avito.st/image/1/1.iENWDra-JKpAroarSlTaTEyvJqzkuSCq5N5FoOgNJQjjrSY.o9yjNZoOgYYiHNuz0WZ-cMVge0N_T4WbTxWApxclA6M",
+      "https://c60.img.avito.st/image/1/1.T5YN97a-438bV0F-H9ZekRJW4Xm_QOd_vyeCdbP04t24VOE.8pXLBKZgyIeQiqkTx4PmXGtbpnO9jAWIxcUE1VWmq3I",
+      "https://c60.img.avito.st/image/1/1.TBOEC7a-4PqSq0L7kG5bFJuq4vw2vOT6NtuB8DoI4VgxqOI.6SAjFhmnalrO-lZb4v4wu7zqM9NaNmy_w3cXKWmS-40",
+      "https://30.img.avito.st/image/1/1.ZT1dx7a-ydRLZ2vVG-ZUUHpmy9LvcM3U7xeo3uPEyHboZMs.ApwDpE77n0gGDPizYlHaTF1deqJ2DBK3EvXVlYgPKzQ?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 6000,
+    "desc": "2-к. квартира, 47 м², 3 кровати",
+    "street": "б-р Всполье, 33"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_60_m_3_krovati_2701701110?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://c90.img.avito.st/image/1/1.4h4Gsba_TvcQEez2TuLdT8kSSPGkFE7xw3FE_RAR7PawEg.-5gOiUGJsWz2eUi1NYCg5vAOQ9PQAUSAVvFZ_kgZ4-U",
+      "https://80.img.avito.st/image/1/1.DYLMZLa_oWvaxANq2gQt0wPHp21uwaFtCaSrYdrEA2p6xw.GWZVb0Cj2aQM5x_-h7rxWk_zyzi_o75ME8zn0Xzt2aw",
+      "https://70.img.avito.st/image/1/1.kmXUVra_PozC9pyN_BiyNBv1OIp28z6KEZY0hsL2nI1i9Q.crmxO_0PiCRT8QWOR9j8VZZWm-J6qUoTbEU347hq0_M",
+      "https://80.img.avito.st/image/1/1.e65dv7a_10dLH3VGJ-Jb_5Ic0UH_GtdBmH_dTUsfdUbrHA.7GeBKIRwbIKPkuTv2Bis8swI0GzJi98QH6UQm0C36oA",
+      "https://30.img.avito.st/image/1/1.VrNgjLa_-lp2LFhbQIF34q8v_FzCKfpcpUzwUHYsWFvWLw.AE6-5D5C_2rfu-klGcd-1g4Ev-yZJ0CACYQCU3Ec9RY?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 8500,
+    "desc": "2-к. квартира, 60 м², 3 кровати",
+    "street": "б-р Всполье, 33"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_57_m_4_krovati_2393518254?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://30.img.avito.st/image/1/1.e63Gcba-10TQ0XVFvGwosarQ1UJ0xtNEdKG2Tnhy1uZz0tU.vQSbEvO5mE_MxVLvyQcyiGeKdRnTCnQ5BVJnK0n0FMQ?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://00.img.avito.st/image/1/1.3AN7R7a-cOpt59LrT3jyEBfmcuzJ8HTqyZcR4MVEcUjO5HI.RK1C5FiQdwT4o-lbFnfFR2twY3zdJn1YZE11uz_93as?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://10.img.avito.st/image/1/1.inB1lLa-JpljNISYbbKgYxk1JJ_HIyKZx0RHk8uXJzvANyQ.MY7piV5Ekl6AWJ07UdKxWr8uHR_FhoQlliTevKaXJeU?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://00.img.avito.st/image/1/1.hu2F1La-KgSTdIgFhZrZ_ul1KAI3Yy4ENwRLDjvXK6Ywdyg.UjyJj0Q0rYb6T7n9wInA9o9QvM2OHG8uEnoGdUjE9m0?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://00.img.avito.st/image/1/1.OVdCOra-lb5Umje_PEoRRC6bl7jwjZG-8Or0tPw5lBz3mZc.J96mzkEgW5dcoL8y5bN8ViRIuYs83vEGLwuHW_hGbs4?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 5000,
+    "desc": "2-к. квартира, 57 м², 4 кровати",
+    "street": "ул. Ленина, 93"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_46_m_4_krovati_4152859565?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://30.img.avito.st/image/1/1.orWGBra-DlyQpqxdzlzqtO2kDFo0sQpcNNZvVjgFD_4zpQw.zvGOEqi8sETBwTXrUGeIwPUiU25j-AZ5WxEIXiaN-ZQ?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://30.img.avito.st/image/1/1.X_8dZba-8xYLxVEXLzwX_nbH8RCv0vcWr7WSHKNm8rSoxvE.3AFzTbxj3ioSXuZKNOqROF9A0Ox8KAgBsCiIsX4qcmI?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://90.img.avito.st/image/1/1.LUC-p7a-gamoByOo6PdhbbQGg68MEIWpDHfgowCkgAsLBIM.T0vzlqmg0mur0aLjNxE-PsrGsTkIPuj_rUOYs4XsbOI",
+      "https://c70.img.avito.st/image/1/1.7A-0dLa-QOai1OLn4EekIL7VQuAGw0TmBqQh7Ap3QUQB10I.UokFvb3eCJS1qf3uRbr3YH9UGsZnsUoO4hVqPYkbemE",
+      "https://70.img.avito.st/image/1/1.dMLhL7a-2Cv3j3oqhXY8w4qN2i1TmNwrU_-5IV8s2YlUjNo.q9M3Ya67J-qEIzMgaIBmCJjnokxoxWpwJkAyIZtZgAY"
+    ],
+    "price": 4000,
+    "desc": "2-к. квартира, 46 м², 4 кровати",
+    "street": "Советская ул., 18"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_45_m_2_krovati_8350268399?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://50.img.avito.st/image/1/1.SBPsQLa-5Pr64Eb78BFQD-vg5vxe9-D6XpCF8FJD5VhZ4-Y.ciKe0HtcNgvn5p7GTjRfea1-Rh9oWvl6ii3eFtxTQ2I",
+      "https://50.img.avito.st/image/1/1.R2lhi7a-64B3K0mBY9oCdGYr6YbTPO-A01uKit-I6iLUKOk.zZ8bCMkar5QayP62rj6BjAIde_hd1cM33gA7bQdH0D0",
+      "https://80.img.avito.st/image/1/1.xwRYdba-a-1O1cnsWn6fF1_Vaevqwm_t6qUK5-Z2ak_t1mk.SDZiYo2ZLd7p6dGnnMh51zJ-2yVQDL5-oivo_Aiz-zY",
+      "https://10.img.avito.st/image/1/1.cAJoeba-3Ot-2X7qBEAsHG_Z3u3aztjr2qm94dZ63Und2t4.Tq37jH9kclYJN9MSmPKpdn1d_gKkeqzfN869TGp-tjo?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://00.img.avito.st/image/1/1.KY4Dcba-hWcV0SdmXQlokATRh2GxxoFnsaHkbb1yhMW20oc.nsfHJ6xeA5O2Ezcl1i7SymnUx2vdi9eRAmnEIMPYox8?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 8000,
+    "desc": "2-к. квартира, 45 м², 2 кровати",
+    "street": "Советская ул., 2"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_52_m_2_krovati_4415207678?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://c70.img.avito.st/image/1/1.S4x74La-52VtQEVkYc11iXxA5WPJV-NlyTCGb8Xj5sfOQ-U.aHm-_PPMmDrcLAPd4lce2GYipod27e9bPi5Xl-zOeuE",
+      "https://20.img.avito.st/image/1/1.OfpBTLa-lRNX7DcSPyRBvDDtlxXz-5ET85z0Gf9PlLH075c.AyE0jIrCxdaSWP5ooWcB-Ra-IU__q1IGPKRU0NmP8vs?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://50.img.avito.st/image/1/1.ErZVAba-vl9DoRxefUEk8SSgvFnntrpf59HfVesCv_3gorw.wXJ8hszHdlKiAxsYsa-GIDDvHJ5wO9cJHRH6TqZvRgA",
+      "https://c90.img.avito.st/image/1/1.Wgm6Pra-9uCsnlThgk87T8uf9OYIifLgCO6X6gQ990IPnfQ.eXvHRWSp-_zta_S5nn4fuLyeVbNerd8A2CQtAZZ8RiQ",
+      "https://50.img.avito.st/image/1/1.CV5IVLa-pbde9Ae2VjwBRU_0p7H646G3-oTEvfZXpBX996c.hxW96jsywQgi7OHbXmTTPSsgKBdOEJes1Fdrch0s9yk"
+    ],
+    "price": 5000,
+    "desc": "1-к. квартира, 52 м², 2 кровати",
+    "street": "б-р Всполье, 18"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_40_m_2_krovati_2477640770?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://c60.img.avito.st/image/1/1.EEY3VLa_vK8h9B6uG3hJAuv3uqmV8byp8pS2pSH0Hq6B9w.CnabzV0___OYRepUiaJiXLFYpECBOgLf0Iuka4DCuxg",
+      "https://70.img.avito.st/image/1/1.yhzUQba_ZvXC4cT0zC6cTxviYPN25GbzEYFs_8LhxPRi4g.EC616QrkIjQUw9SfthtJOiphl6B9dMBWafulpVTG5xg",
+      "https://30.img.avito.st/image/1/1.VuxpFba_-gV_tVgESTwPqLW2_APLsPoDrNXwD3-1WATftg.DOSHMKIpR94umJo6UHzooiodU_bGo2WIrkmSNqXW03k?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://60.img.avito.st/image/1/1.fRYGnba_0f8QPXP-cLQkUto-1_mkONH5w13b9RA9c_6wPg.yVaB4SvDrmXz1aRPN9T2JP90eLSXcnNafT2X5l38Bl8",
+      "https://c80.img.avito.st/image/1/1.ZuxpFba_ygV_tWgEKTw_qLW2zAPLsMoDrNXAD3-1aATftg.gDH87slFrMyhNikhDPTGowMz2qR9S6GgxW_0g9ziYd0"
+    ],
+    "price": 6000,
+    "desc": "1-к. квартира, 40 м², 2 кровати",
+    "street": "б-р Всполье, 33"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_62_m_3_krovati_4298338027?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://90.img.avito.st/image/1/1.RJTfw7a-6H3JY0p82-pjle5j6nttdOx9bROJd2HA6d9qYOo.qpX6H-L41tdF-bm4xFaU-lZG37B0M6q3tr6jN8WO95c",
+      "https://40.img.avito.st/image/1/1._KyZuLa-UEWPGPJE7cOV5csZUkMrD1RFK2gxTye7UecsG1I.tPL9FqCWALL_J8JdTMbXp8_e08xyHeizPmZwf-JNHlE",
+      "https://50.img.avito.st/image/1/1.Uhzg4ra-_vX2Qlz0yONOecZC_PNSVfr1UjKf_17h_1dVQfw.-xcmjmo_WGd85CVF6h_JrDlW6FcHqKFe8rfFswrj8xk",
+      "https://c80.img.avito.st/image/1/1.XiqaEra-8sOMslDCqgNcHMiz8MUopfbDKMKTySQR82EvsfA.f3D5_h0QBXXdunW6yWiEzb25OX1yxI8-3mvZHr_EiDw",
+      "https://30.img.avito.st/image/1/1.k8gOhLa-PyEYJJ0gJKa8_1wlPSe8MzshvFReK7CHPoO7Jz0.Mg6sazth9vPvAJEg3RXEfkPwuzIvqhnMdHZUORTvW78?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 6000,
+    "desc": "2-к. квартира, 62 м², 3 кровати",
+    "street": "б-р Всполье, 36"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_45_m_4_krovati_2361818395?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://c70.img.avito.st/image/1/1.Bs98-ba-qiZqWQgnfMUzpxJbqCDOTq4mzinLLML6q4TJWqg._Dce6s4qo0RDAg_vKqvInq_b1v7jVpGMrFRZ-kKuNCU",
+      "https://60.img.avito.st/image/1/1.I5f0Bra_j37ipi1_vn5tkiKliXhWo494McaFdOKmLX9CpQ.gDmAO315oFptFd32ZWghETzHGuO0i5w9GGHzXOXLiBU",
+      "https://50.img.avito.st/image/1/1.2xwDIra-d_UVgtX0OUncYh6DdfOxlXP1sfIW_70hdle2gXU.83yRT0KG2bXs1rbGolxWO1lsnwqHtWnth4B__eEweHM",
+      "https://40.img.avito.st/image/1/1.1LOCsLa-eFqUENpbpvfb9_IRelwwB3xaMGAZUDyzefg3E3o.L4hchRpbc_K6m0vnuWf1zhjgnuW-h7WjBxk5S-uCCNY",
+      "https://c90.img.avito.st/image/1/1.Rl4ojLa-6rc-LEi2KI1cGDEt6LGaO-63mlyLvZaP6xWdL-g.HuNVQeHOIZro0jaBBFhUP_ANpppP8E9IcZtjgs9gsig"
+    ],
+    "price": 4000,
+    "desc": "1-к. квартира, 45 м², 4 кровати",
+    "street": "ул. Ленина, 93"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_43_m_3_krovati_1949272812?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://c70.img.avito.st/image/1/1.qPWzUra-BByl8qYd71iPloHyBhoB5QAcAYJlFg1RBb4G8QY.dpMXANWxsla0xN7WYwG52O2aJm_yKufQhP8InZsMsgY",
+      "https://c80.img.avito.st/image/1/1.N8-xUba-myan8Tkn0wlA-oTxmSAD5p8mA4H6LA9SmoQE8pk.AFVD9gqpDMoSA5Q1inTAI_8lfZn5CzSGKUw9BEG2nqE",
+      "https://60.img.avito.st/image/1/1.a7ZQXLa-x19G_GVeClV1vGX8xVni68Nf4oymVe5fxv3l_8U.R6Mkdb02CPTaEpsBWocukB9hvRQY5WQurDxLEm-b9Jw",
+      "https://50.img.avito.st/image/1/1.4kVsLLa-Tqx6jOytJFvoT1mMTKrem0qs3vwvptIvTw7Zj0w.Ef2Ux4JBgER-RGCEozdadMjGALMEBpaSSy5gPdI__LI",
+      "https://c80.img.avito.st/image/1/1.xIdlR7a-aG5z58pvYUD6slDnamjX8Gxu15cJZNtEaczQ5Go.JWnQG6BYbxWwW63J-oacCRP8-arFJzTUWvxdKeyaI5c"
+    ],
+    "price": 5625,
+    "desc": "2-к. квартира, 43 м², 3 кровати",
+    "street": "Советская ул., 17"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_35_m_2_krovati_8258196477?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://70.img.avito.st/image/1/1.huNaP7a-KgpMn4gLWkmBjk2fKAzoiC4K6O9LAOQ8K6jvnCg.QWH-tHppF1GgYI_dUSe9rLdbEUtFT2sTGhDluupdpYo",
+      "https://60.img.avito.st/image/1/1.zJJXg7a-YHtBI8J6Q_Tp0X4jYn3lNGR75VMBcemAYdniIGI.U0cxy2f86fFaGSHyrNDLLoUuO8yTUqKvgT_EZrplS2Y",
+      "https://c80.img.avito.st/image/1/1.3pJaDLa-cntMrNB6aj_C_E2scH3ou3Z76NwTceQPc9nvr3A.giHxaUAKfh2On6UA12kMBjO9ki0Qn3VTLy77fcnHbKY",
+      "https://70.img.avito.st/image/1/1.r8C7z7a-Aymtb6Eo6cH9vJNvAS8JeAcpCR9iIwXMAosObAE.mZPTNYPHe0uhjHi_ldTaQIg6z6uug3EgY1I6sckwfOo",
+      "https://50.img.avito.st/image/1/1.WbwsVba-9VU69VdUElRH0jv191Oe4vFVnoWUX5JW9PeZ9vc.Qhfw3MzsU49gCC5Xt4hOAdP8ib-ZB1NTvjOnftk5jpU"
+    ],
+    "price": 6500,
+    "desc": "1-к. квартира, 35 м², 2 кровати",
+    "street": "Советская ул., 61"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_40_m_2_krovati_8015217341?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://00.img.avito.st/image/1/1.INwYzra-jDUObi40VMoKkylujjOqeYg1qh7tP6bNjZetbY4.OJ244aM_GyrWzixOU1dtA63QMJiiPsZSEDI5GRq_eQM?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://20.img.avito.st/image/1/1.dcj7_ra-2SHtXnsgnYdfqsVe2ydJSd0hSS64K0X92INOXds.UjQDmADXFnC0K4dfAOQ4fVYzNesN-re8r-aChpUfAwE?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://10.img.avito.st/image/1/1.HfEwVra-sRgm9hMZBkJgvwH2sx6C4bUYgobQEo5VsLqF9bM.ZRQbaJfE5DRfCHPaaaJDifOJi52ccjOtCe8KiON0Szc?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://50.img.avito.st/image/1/1.IBweC7a-jPUIqy70UlNSUi-rjvOsvIj1rNvt_6AIjVerqI4.-JPye_WfsDAfY49Dh5RrlaYHpCULNm14Z6lXQDUfrwc",
+      "https://50.img.avito.st/image/1/1.K8jNdLa-hyHb1CUgl0wEh_zUhSd_w4Mhf6TmK3N3hoN414U.Y-3gKXcWIEaFc2WKKo9McPg0vCitrGDqMlWnSzeNir0"
+    ],
+    "price": 6000,
+    "desc": "1-к. квартира, 40 м², 2 кровати",
+    "street": "Советская ул., 65"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_51_m_3_krovati_2231575067?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://00.img.avito.st/image/1/1.wdPemLa-bTrIOM870I-V8O46bzxsL2k6bEgMMGCbbJhrO28.gKaJhg6XCRhHB0TXbJvcqz33YGYMTnMW8FS-LDHv-48?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://c80.img.avito.st/image/1/1.qfVCU7a-BRxU86cdHCGh0jTxBxrw5AEc8INkFvxQBL738Ac.4ild948Q3HaWyrsxPk7SS9WgbJyqY3VW0VTdgjsISnc",
+      "https://00.img.avito.st/image/1/1.YRzGvba-zfXQHW_0iNBpO7Afz_N0Csn1dG2s_3i-zFdzHs8.seOm2TV1BUN0ERFUdez4j8DOKCcRwGwe82HFsMIXTRg?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://20.img.avito.st/image/1/1.WuhEPba-9gFSnVQAfExEzzKf9Af2ivIB9u2XC_o-96PxnvQ.3_5bXzNDoimPy__WrXxooz9gQbAl8AgmhpcUGcBBOuE?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://30.img.avito.st/image/1/1.XzWOrba_89yYDVHdvORYYEkO9dosCPPaS2351pgNUd04Dg.0EBQEKY1vu0ezM263dSfTGxtNiaGhmkYEP0yePdmw3E?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 3993,
+    "desc": "2-к. квартира, 51 м², 3 кровати",
+    "street": "б-р Всполье, 5"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_42_m_2_krovati_7343177532?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://c70.img.avito.st/image/1/1.xHCAfba-aJmW3cqYhB6VLvzcap8yymyZMq0Jkz5-aTs13mo.yBiqdDSKwrnKHRUyvEufoZbmgd14TUAM2s1V2vzCkI8",
+      "https://90.img.avito.st/image/1/1.hPloY7a-KBB-w4oRbCXjphTCKhba1CwQ2rNJGtZgKbLdwCo.9fpmeLpmwobMyH5btiax2eIgMj4h_AkGfWc4frx5NHg",
+      "https://70.img.avito.st/image/1/1.BDX2lba-qNzgNQrd8vVjaIo0qtpEIqzcREXJ1kiWqX5DNqo.PDJto-yZaGlwuxTNMoSUZzySq2zpgZYBBpYKrm-G0gw",
+      "https://50.img.avito.st/image/1/1.M94u-ra-nzc4Wj02RJ4Z1lxbnTGcTZs3nCr-PZD5npWbWZ0.NtKuuznE9EBnUHTU3cgQuo5U_QY6cOPGYYHB8G2tlEo",
+      "https://c80.img.avito.st/image/1/1.J0AzAba-i6kloSmocQFKSUGgia-Bto-pgdHqo40CiguGook.jK5F2ProrSzYCKB0lDuiuz_mvNPUTU0pQ4gWINfySGU"
+    ],
+    "price": 5100,
+    "desc": "2-к. квартира, 42 м², 2 кровати",
+    "street": "Лоунская ул., 8"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_46_m_3_krovati_3712094426?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://10.img.avito.st/image/1/1.45dgHba-T352ve1_Kh6xjXS9TXjSqkt-0s0udN4eTtzVvk0.OyfcYyDKkftcHixzbvey4f-HJMJFrmUA39Ur5j0fCjA?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://00.img.avito.st/image/1/1.stVOrLa-HjxYDLw9Jvqpz1oMHDr8Gxo8_Hx_NvCvH577Dxw.KEnkVEcr6sNlp9H2izqJUr2X6TqiZOcjE5QfnDyoyhQ?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://80.img.avito.st/image/1/1.l4kXRLa-O2AB5JlhNVL6lgPkOWal8z9gpZRaaqlHOsKi5zk.I19Ud2kSYPzd1HaA9k_Yw15k6odnLAyPS79OSAnLuXU",
+      "https://80.img.avito.st/image/1/1.gHwjmba-LJU1OY6UL-fAPQI5LpORLiiVkUlNn52aLTeWOi4.DokD7zn51B3ct0W7ukbZLyZuts-xJcmWJB3zB6uhTkM",
+      "https://00.img.avito.st/image/1/1.qEBxYba-BKlnwaaoLUu3TnrDBq_D1gCpw7Flo89iBQvEwgY.ZrDxI00aAVIcCsspTfGPnr26x6yQ-iK-0v-tTxx1VMo?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 3600,
+    "desc": "2-к. квартира, 46 м², 3 кровати",
+    "street": "Советская ул., 17"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/4-k._kvartira_91_m_8_krovatey_8365433587?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://c80.img.avito.st/image/1/1.CBf5bra-pP7vzgb_5WYWIO3OpvhL2aD-S77F9EdtpVxMzaY.X2-M2TE9zbEBj3IeAwtCkE9fVr_mysVu2xBLTANb510",
+      "https://90.img.avito.st/image/1/1.5hqRGba-SvOHuejy0Sa8LIW5SPUjrk7zI8kr-S8aS1Ekukg.7vIJBYdtRFevgw3UCg6o5rr3rWHEA12cHl_Kze-PFpc",
+      "https://c60.img.avito.st/image/1/1.1hqbULa-evON8Njyu0veLI_wePUp537zKYAb-SVTe1Eu83g.2dnsRdsAkTmSwjHVrWhH6lXPkfY8eTtssIlN9-K3kJo",
+      "https://50.img.avito.st/image/1/1.Pwmp4ra-k-C_QjHh27YlPb1CkeYbVZfgGzLy6hfhkkIcQZE.c2S0kkr9npQCHExwTKVbgRkjdWqsBYGtjT6CzIAD28E",
+      "https://30.img.avito.st/image/1/1.OmYSvLa-lo8EHDSOauwPTwcclImgC5KPoGz3hay_ly2nH5Q.nAcylUsaWaN7x3bZkabt5Do5nr3rcLC3PhGTxtw61wk?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 8000,
+    "desc": "4-к. квартира, 91 м², 8 кроватей",
+    "street": "б-р Всполье, 14"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_44_m_3_krovati_3716649679?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://10.img.avito.st/image/1/1.qWwJWba-BYUf-aeEV3O1GH37B4O77gGFu4lkj7daBCe8-gc.GBQOgECvHQL6IdW17cl9gTP5tBdWlfA1PQJB3KbhYXY?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://c80.img.avito.st/image/1/1.C1UXVLa-p7wB9AW9DXQRIWP2pbql46O8pYTGtqlXph6i96U.DHkddc3lM8e2zKtXD3sDmfjXaQ48-11cbXg5yQI-HlE",
+      "https://50.img.avito.st/image/1/1.JbQe3ra-iV0IfitcWKY_wGp8i1usaY1drA7oV6DdiP-rfYs.w34RnyP6QgpTBFYnAW4fLprmWWLrMVbXg6uTw4-4K9k",
+      "https://30.img.avito.st/image/1/1.RnRDrLa-6p1VDEicQ4VdADcO6JvxG-6d8XyLl_2v6z_2D-g.v7jUlMLbx1vAdgzA6t7qsPfvtQ965bPV38OXZqeyWfc?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://50.img.avito.st/image/1/1.AWx2Wba-rYVg-Q-EeAkaGAL7r4PE7qmFxInMj8harCfD-q8.DVjhNjWwMcN7qqnIWhr6LwPpqFka-fMPipb16czuZzw"
+    ],
+    "price": 3000,
+    "desc": "2-к. квартира, 44 м², 3 кровати",
+    "street": "Советская ул., 42"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_31_m_2_krovati_2429748094?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://c70.img.avito.st/image/1/1.kDoCqra_PNMUCp7SLuTNHNIJOtWgDzzVx2o22RQKntK0CQ.w4a-2blqIOUkNBWA3OWHtmz89Q1huHaziZW4yfyDajA",
+      "https://50.img.avito.st/image/1/1.QzGyVba_79ik9U3ZuFgZF2L26d4Q8O_ed5Xl0qT1TdkE9g.-QHyIfT85MEvix_LtC10QImUlmuysRvhOhPAPSqU0m4",
+      "https://c90.img.avito.st/image/1/1.1KsocLa_eEI-0NpDDHeOjfjTfkSK1XhE7bBySD7Q2kOe0w.dV5N1RS2cCfji4twBKcSzbO9dpzbaEH0ewDAGYlm84Q",
+      "https://40.img.avito.st/image/1/1.B0v5yLa_q6LvaAmj-8hdbSlrraRbbaukPAihqO9oCaNPaw.OWOBgAP58vTo3wV7jGPlrVaqXuyHCsZ6x6eAJMvxy10",
+      "https://30.img.avito.st/image/1/1.H6TZA7a_s03PoxFM6wtFggmgtUt7prNLHMO5R8-jEUxvoA.QLDMg_cyVJITKAoVepU8uF6h7GkRf3pJAcf4PFPyd6k?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 3500,
+    "desc": "1-к. квартира, 31 м², 2 кровати",
+    "street": "Советская ул., 55"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_40_m_2_krovati_2655352943?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://30.img.avito.st/image/1/1.wkmIz7a-bqCeb8yhgJT0Ab5vbKY6eGqgOh8PqjbMbwI9bGw.71oH_PvVPIp0wLKihiSjJ6xXcB809ll1UPj4ejnHKf4?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://c70.img.avito.st/image/1/1.93Z70ba-W59tcfmeGb7aOU1xWZnJZl-fyQE6lcXSWj3Oclk.XUy32EDJj3DD1_EHeH51d_p0PqLbcadMx7T3CQ8bmfY",
+      "https://c60.img.avito.st/image/1/1.-2nd8ba_V4DLUfWBp-q8ZBxSUYZ_VFeGGDFdistR9YFrUg.LcwFNL2zblnaLjFbU6PLVQ63YvejzWJHEUylsOAe8d8",
+      "https://c80.img.avito.st/image/1/1.qYNuULa-BWp48KdrMELDyljwB2zc5wFq3IBkYNBTBMjb8wc.P0eaBBm5x2Ikd5jSu5puuh7VMkKtpmZCWo8F-vUdYCY",
+      "https://50.img.avito.st/image/1/1.qe8lc7a-BQYz06cHezmHyxvTBwCXxAEGl6NkDJtwBKSQ0Ac.YKV2U2ZVd_ULAX_nxtax4CkfxVCXNHc4Aua-O4S6GmU"
+    ],
+    "price": 5226,
+    "desc": "1-к. квартира, 40 м², 2 кровати",
+    "street": "б-р Всполье, 33"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_608_m_4_krovati_4929767323?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://c90.img.avito.st/image/1/1.IT5z9La-jddlVC_WPZwTImxVj9HBQ4nXwSTs3c33jHXGV48.GRfRbVc6zIV5i2a41itE20i51shb7hxfLb88dwGdIiw",
+      "https://40.img.avito.st/image/1/1.9btOd7a-WVJY1_tTKAjG7mfWW1T8wF1S_Kc4WPB0WPD71Fs.INVU9eHL1v64gEs3F75cffCKRCNBCAjTnVTU2D-nDjo",
+      "https://30.img.avito.st/image/1/1.PZcl3ra-kX4zfjN_U7ZJyjp_k3iXaZV-lw7wdJvdkNyQfZM.QC2eIHCq6u1yPZrWtcrrvTalxd62NieRmj9aDi0qQ8w?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://10.img.avito.st/image/1/1.IABT8ba-jOlFUS7oH4ltXUxQju_hRojp4SHt4-3yjUvmUo4.DBmWcVy0UrzB_sWYmV2eQ8060qYdGv6qoe02EgcbAkQ?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://40.img.avito.st/image/1/1.4hoJUra-TvMf8uzyQXnaTyDzTPW75Urzu4Iv-bdRT1G88Uw.FSIsEX5MepyB0oe_RCQ_f4PC23HOvlhP1ztvwP3LDVw"
+    ],
+    "price": 6999,
+    "desc": "2-к. квартира, 60,8 м², 4 кровати",
+    "street": "б-р Всполье, 38"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_60_m_3_krovati_2045764863?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://c70.img.avito.st/image/1/1.um_mVba-Fobw9bSHniOmG-T3FIBU4hKGVIV3jFhWFyRT9hQ.lOlvaK2h94BCSGTGyKA1tebtae5XDxPwAfVfL19vYKg",
+      "https://30.img.avito.st/image/1/1.LxdP27a-g_5ZeyH_Hf87dFJ5gfj9bIf-_Qvi9PHYglz6eIE.SvQbQkroC651F2hxGvTsA8GyM1iNjXRp2ePwaUqZa9M?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://c60.img.avito.st/image/1/1.Vfdpoba--R5_AVsfT5gu1x8D-xjbFv0e23GYFNei-LzcAvs.cSkv4H7EFIO0SOFDzaW8pi1rUgAg1Kv0X7Q6TG-5YbQ",
+      "https://30.img.avito.st/image/1/1.KMGOsra-hCiYEiYp0sZq4fgQhi48BYAoPGLlIjCxhYo7EYY.cZqbPRJKZYvbAjBuaFFngk9Bv3UP1rb1Rf5ZsMBdCEY?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://10.img.avito.st/image/1/1.R1nkTra-67Dy7kmx5n8Wasvv6bZW-e-wVp6KulpN6hJR7ek.2gB3BPj8tEs2-wmdSEincf2o9zuqbhJjQw0bytkaKhA?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 7500,
+    "desc": "1-к. квартира, 60 м², 3 кровати",
+    "street": "б-р Всполье, 13"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_47_m_2_krovati_2248669748?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://50.img.avito.st/image/1/1.2ZSXa7a-dX2By9d8qXyi1KLLd3sl3HF9JbsUdylodN8iyHc.UUnzgGwOs50uGGFM110eahInCNMYz_Wxq785NN1YZXg",
+      "https://00.img.avito.st/image/1/1.w5jT6ba-b3HFSc1w2dK4mdxIbXdhXmtxYTkOe23qbtNmSm0.bqtHtOhI0U7_vqEfYArM2ytdO35Wm3chcrQR5QEyruQ?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://10.img.avito.st/image/1/1.sc1aNra-HSRMlr8lNAS4zVWXHyLogRkk6OZ8LuQ1HIbvlR8.z6IQraOfvVEYVCv_6Vkl-hndRPs7YTB_Ch31nJMSFWg?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://30.img.avito.st/image/1/1.W69uhra-90Z4JlVHVNcKqWEn9UDcMfNG3FaWTNCF9uTbJfU.E6gr1hYxOybcj9DD8mDLw-UUsHjY1bVsVfvyR3Xq88k?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://00.img.avito.st/image/1/1.82Bap7a-X4lMB_2IMOCVMjsGXY_oEFuJ6Hc-g-SkXivvBF0.-gmk0aN6GVz98i_jjJkTfAQbJtW_WDnQq3rUbwKU6Tg?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 6500,
+    "desc": "2-к. квартира, 47 м², 2 кровати",
+    "street": "Советская ул., 52"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_39_m_2_krovati_7563798961?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://c90.img.avito.st/image/1/1.Qqu4Pba-7kKunUxDsHhqgdKc7EQKiupCCu2PSAY-7-ANnuw.GtzbZ1jkDze80GSeU6qlxvJ2vLzSwup7xCPYVEJoC4s",
+      "https://c60.img.avito.st/image/1/1.0L3ta7a-fFT7y95VwQD8jOPLflJf3HhUX7sdXlNoffZYyH4.vBz7tyIf98KfZjbdi-tGPxJ11ypQPysWG0_0omI83Yg",
+      "https://10.img.avito.st/image/1/1.BPASYLa-qBkEwAoYFnQqugDAqh-g16wZoLDJE6xjqbunw6o._x6UeGMRsUFJXZy3RACf_wT4vZAM-UMx3ArQ56BA_QQ?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://40.img.avito.st/image/1/1.3L4pCba-cFc_qdJWHQrv5G-oclGbvnRXm9kRXZcKcfWcqnI.E-uyOdQgIrdCYpKDiqtWsgFxLVzaYFxMCqbTe5axsg8",
+      "https://c90.img.avito.st/image/1/1.i8eapra-Jy6MBoUvgPSn4dwHJSgoESMuKHZGJCSlJowvBSU.RkkrVA89pNj-EQo5yLsg7ApkNXRA3650YmlF6LK3Amw"
+    ],
+    "price": 4374,
+    "desc": "2-к. квартира, 39 м², 2 кровати",
+    "street": "ул. Гоголя, 3"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_38_m_2_krovati_2936921088?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://40.img.avito.st/image/1/1.Temdara-4QCLykMBiyso37jK4wYv3eUAL7qACiNp4KIoyeM.5qe_u5UNWpdnmoXRaUJum7wnWY9Ybfij6iQnUVAoXj8",
+      "https://80.img.avito.st/image/1/1.TTrULLa-4dPCjEPSwkl7AdSO49Vmm-XTZvyA2Wov4HFhj-M.kjP6ecw4gtou6xONeLFNvg1Cm-5-1d2yZHLipI53BHQ",
+      "https://00.img.avito.st/image/1/1.q8tuLLa-ByJ4jKUjNGr6_0uMBSTcmwMi3PxmKNAvBoDbjwU.wkDYzIzaqzBBBqyV6L6qRpJ6ISlymQzjcL82qe8kD4o?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://60.img.avito.st/image/1/1.uwSXNLa-F-2BlLXs7R65MLKUFeslgxPtJeR25yk3Fk8ilxU.P93c9WQJnol2BB9E40nziqyRzBuHPXany8F5GtXwI8w",
+      "https://c90.img.avito.st/image/1/1.ILXxcba-jFzn0S5dvQE9gNTRjlpDxohcQ6HtVk9yjf5E0o4.h8vzwqf0pY3vafNUmjN6KxYUvdoKsZi-FvuTosKd3Eg"
+    ],
+    "price": 4400,
+    "desc": "2-к. квартира, 38 м², 2 кровати",
+    "street": "Советская ул., 34"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_46_m_4_krovati_2693406982?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://90.img.avito.st/image/1/1.0Y6xBra-fWenpt9mn23mhrKnf2EDsXlnA9YcbQ8FfMUEpX8.TlgKnRF0MbJFf3D1izqbOwgdqm3Mq5WEzIYyaQoFQj8",
+      "https://50.img.avito.st/image/1/1.EHkCgLa-vJAUIB6RLuxzcAEhvpawN7iQsFDdmryDvTK3I74.3a-9a9OLzrq0CvHZylZGff1xkvhO1w47UDTU5Ut5ndU",
+      "https://50.img.avito.st/image/1/1.zqFTx7a-YkhFZ8BJQ4CCq1BmYE7hcGZI4RcDQu3EY-rmZGA.XQE_A96oY6cco1F1oLlLCG4GPGZ56Un7kgzSddk2oEI",
+      "https://60.img.avito.st/image/1/1.o5rf-ra-D3PJWq1ylYCYktxbDXVtTQtzbSpueWH5DtFqWQ0.TM2Nimnf-0BFneOFES6JoDqEBOjI6f3jmXWQvvK4fSM",
+      "https://c80.img.avito.st/image/1/1.Qn8aG7a-7pYMu0yXEmp5dxm67JCorOqWqMuPnKQY7zSvuOw.lXHeAoGG3IyFFKqrbK1FJOxuwJTCKyFsWoRnGKJrcvQ"
+    ],
+    "price": 3000,
+    "desc": "2-к. квартира, 46 м², 4 кровати",
+    "street": "Советская ул., 53"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_40_m_1_krovat_8115332780?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://00.img.avito.st/image/1/1.nCSldba-MM2z1ZLMkXfcPJnVMssXwjTNF6VRxxt2MW8Q1jI.JRMSam2rAHDzKr80bxsH_xAhRSU5c4ithkHpdVfrL6k?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://30.img.avito.st/image/1/1.pUhLPra-CaFdnqugDRThV3eeC6f5iQ2h-e5oq_U9CAP-nQs.Fp-wO-UH219Pl-RQzmsS6WdQ0uMymQzsh-2MiimlD00?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://50.img.avito.st/image/1/1.vokFZ7a-EmATx7BhdTn6kTnHEGa30BZgt7dzartkE8KwxBA.9RJDZVjhyzyi5neGp_W_MXFdfWiYSl7GnfzwrAFGKkY",
+      "https://40.img.avito.st/image/1/1.yQ81era-ZeYj2sfnKzHmFwnaZ-CHzWHmh6oE7It5ZESA2Wc.Ns0vdM-cyPQoQWvkIn7TbjGnpbQCcUXwGBWPikaIfvo",
+      "https://00.img.avito.st/image/1/1.FYYppra-uW8_BhtuD8Z3nBUGu2mbEb1vm3bYZZeluM2cBbs.bY1G0Glv1Zz7ns7xqUHRD7MjVCByPYpA-kQ4vY0bQP4?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 4000,
+    "desc": "1-к. квартира, 40 м², 1 кровать",
+    "street": "Советская ул., 65"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_40_m_2_krovati_4247561472?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://30.img.avito.st/image/1/1.0_y17ra-fxWjTt0Un9H009JPfRMHWXsVBz4eHwvtfrcATX0.Sh2hdjhZgEOiGgTogc-WUP627syr1eVAvUXp3LUEgb8?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://00.img.avito.st/image/1/1.XHH1g7a-8JjjI1KZwfY9PJsh8p5HNPSYR1ORkkuA8TpAIPI.7Dy1YopSqxHIyy7HAFBOQdl8Fc1NTuvYlRLR9gJJDMg?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://20.img.avito.st/image/1/1.ZEpacba-yKNM0WqiHkhAJDbTyqXoxsyj6KGpqeRyyQHv0so.8f_5N3bY-cKuTSaanRTS0Gp1NRLqX2by-iD67RZsqgQ?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://c60.img.avito.st/image/1/1.2V_TAra-dbbFote37Vnkd7Sjd7BhtXG2YdIUvG0BdBRmoXc.VbeHaAOhXcfNt-nYAxSyY0h03TI5NFz6zAO4pQtrDjA",
+      "https://c70.img.avito.st/image/1/1.5S7Ad7a-ScfW1-vGhkj0APnWS8FywE3HcqcozX50SGV11Es.-p7ivyI-es-ZKqV6WKCEnsxTVJQkyQpYdyItgd1YlOI"
+    ],
+    "price": 15000,
+    "desc": "2-к. квартира, 40 м², 2 кровати",
+    "street": "ул. Калинина, 3"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_62_m_2_krovati_7836810373?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://c70.img.avito.st/image/1/1.38lJVra-cyBf9tEhe0Xskkz2cSb74Xcg-4YSKvdVcoL89XE.brG1FJs5-7kIX8PUaM6xbuSJ9RZE0M2IxzVmSwvYi2U",
+      "https://00.img.avito.st/image/1/1.CHRIEra-pJ1esgacVF45L02yppv6paCd-sLFl_YRpT_9saY.UMP-xSKvYWoz9iJRIIInAFHbwrDrm9GuRgqR7v0BeiM?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://c70.img.avito.st/image/1/1.0eMoHLa-fQo-vN8LBj-_pi28fwyaq3kKmswcAJYffKidv38.OCz7vQoGs5MIoEGinUDsSqMd33YNGyKcGL-WE7IyUNc",
+      "https://90.img.avito.st/image/1/1.kgfhQra-Pu734pzvyQCDQuTiPOhT9TruU5Jf5F9BP0xU4Tw.a5szJ-_IsNuT2_tdV2KlkJR0ppX265AuQqkU9Sf_LmA",
+      "https://50.img.avito.st/image/1/1.sym_bLa-H8CpzL3B1QLWbLrMHcYN2xvADbx-ygFvHmIKzx0.78ZBUEq7IfC32AfVzfc2MQkDmU8xB1HASskMq_wByV4"
+    ],
+    "price": 5625,
+    "desc": "2-к. квартира, 62 м², 2 кровати",
+    "street": "б-р Всполье, 25"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_30_m_2_krovati_8332569636?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://10.img.avito.st/image/1/1.iTUSVra-JdwE9ofdDHSzDxH2J9qg4SHcoIZE1qxVJH6n9Sc.gFaID8np388he4EBy0KSgeIe9yFbtQghq-QErdKfApE?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://30.img.avito.st/image/1/1.y4atKba-Z2-7icVutw7qlK2IZWkfnmNvH_kGZRMqZs0YimU.a18nnm6hlUtAri4_5VsQKOmIxBBpMrsOnW9VhsaUgZw?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://00.img.avito.st/image/1/1.GdwcKba-tTUKiRc0IkFdqRyJtzOunrE1rvnUP6IqtJepirc.-kK-piMu5FyPLZ5QOUy92V4lISg1nPvCDHhRcmudsCo?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://30.img.avito.st/image/1/1.tL-jsra-GFa1ErpXx_T5y6MSGlARBRxWEWJ5XB2xGfQWERo.kCX9u0qwiSdLCvQSq_zG_m477q1j2o8oo5mNu3LQyoI?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://20.img.avito.st/image/1/1.zUMHIba-YaoRgcOrETabNgeBY6y1lmWqtfEAoLkiYAiygmM.Q_m_GZy0oDIImarXUhoLKTKrXqr-devqybE0AjCBvv0?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 6000,
+    "desc": "1-к. квартира, 30 м², 2 кровати",
+    "street": "Советская ул., 44"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_53_m_3_krovati_3720586307?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://10.img.avito.st/image/1/1.o8iC9ra-DyGUVq0gyMSMxvxUDScwQQshMCZuKzz1DoM3VQ0.kS47egKkPTYI58ws27tb6daPJkrOpCbPDtFGbCWB7H8?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://c70.img.avito.st/image/1/1.jWGMNLa-IYialIOJmn7gauyVI44-gyWIPuRAgjI3ICo5lyM.h3h5gl4JFgQmaddLesBGKbdKEQRcv67JWLADRhG3w9c",
+      "https://80.img.avito.st/image/1/1.hJb987a-KH_rU4p--dnDn51SKnlPRCx_TyNJdUPwKd1IUCo.y7OIq8W9vC0uV9ebujaa2uk375Kt8Z7PzhZJBZ-xqaM",
+      "https://50.img.avito.st/image/1/1.XX0Z6ba-8ZQPSVOVL5gVdHlI85KrXvWUqzmQnqfq8DasSvM.WXff-Qk-0rI-Yi2l8kKKHOLWYnA1DUUHlR1_lWVGEbE",
+      "https://10.img.avito.st/image/1/1.sHI_T7a-HJsp776aUwXmcAPvHp2N-BibjZ99kYFMHTmK7B4.47TVU5zKuw6L9Lr_Yz9l1NO1K20MhwwgUpWKG12c3N0?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 16000,
+    "desc": "2-к. квартира, 53 м², 3 кровати",
+    "street": "ул. Ленина, 69"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_85_m_2_krovati_672200686?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://00.img.avito.st/image/1/1.EjuDcLa_vtKV0BzTq1AcKinTuNQh1b7URrC02JXQHNM10w.ct2LAl-vqwsYKAG3sIeRajfX8E7fe9HtKscwjU0TjYk?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://20.img.avito.st/image/1/1.gcNHE7a_LSpRs48rSUX9-YewKyzlti0sgtMnIFGzjyvxsA.zAnxjCnroxQbAJ-VYpQVX5eLCO4r3sBQNynzIwuhYwc?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://c90.img.avito.st/image/1/1.HJ9Crra_sHZUDhJ3do4SjugNtnDgC7Bwh266fFQOEnf0DQ.Nu82hzELUIfCvFijgEmy674t4R1lNvX3CAZjgZ8lWUI",
+      "https://00.img.avito.st/image/1/1.FQOsSra_ueq66hvrimobEgbpv-wO77nsaYqz4LrqG-sa6Q.1mjsIxmR_vXbu14z5MxspmfGPxRpck8ozQGXOZDc1xM?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://00.img.avito.st/image/1/1.EKth7La_vEJ3TB5DTcweustPukTDSbxEpCy2SHdMHkPXTw.9_oYkrXwPZY_HU15yIbZ1xiANNIod002LP2kWdN_tm8?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 5880,
+    "desc": "2-к. квартира, 85 м², 2 кровати",
+    "street": "б-р Всполье, 18"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_41_m_3_krovati_2739005141?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://70.img.avito.st/image/1/1._UYB9ba-Ua8XVfOud_q3TzZVU6mzQlWvsyUwpb_2UA20VlM.c2TXFzZMAVazRfIIqimq6d4s-XII6_-q1oqygKVeopA",
+      "https://40.img.avito.st/image/1/1.ni7Vrba-MsfDDZDG5cPhXOcNMMFnGjbHZ31TzWuuM2VgDjA.Fm5f-ZSM-LBw63JbOJ9pC6-dUFJKUoGsTddeCXcyUf8",
+      "https://90.img.avito.st/image/1/1.rz56lra-A9dsNqHWKKj4NE02AdHIIQfXyEZi3cSVAnXPNQE.RvDmnJ2WnCVrLB5JzUTL4gB6jJVfPfiwXJxgHK3m02c",
+      "https://10.img.avito.st/image/1/1.yF7S2ba-ZLfEeca2zsqDV-V5ZrFgbmC3YAkFvWzaZRVnemY.V8fhqpVakmdAAwO1N4pSdSOhmA8MGsITHlYxxTOasBg?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://c90.img.avito.st/image/1/1.uR7Wx7a-FffAZ7f2qLXYFuFnF_FkcBH3ZBd0_WjEFFVjZBc.P91VG56EV0bZejrsf6y4_UiuuSbzwKMGI7ZcFIUZfys"
+    ],
+    "price": 7500,
+    "desc": "1-к. квартира, 41 м², 3 кровати",
+    "street": "б-р Всполье, 33"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_74_m_4_krovati_7862793356?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://20.img.avito.st/image/1/1.pMdjQra-CC514qovJ0Ca5ybjCijR9Qwu0ZJpJN1BCYzW4Qo.UeW0ht62vW3fqJG9aWszC-uyuc1CGMTBcmPQKJUY7JI?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://c70.img.avito.st/image/1/1.w9JZqra-bztPCs06U8Hq8hwLbT3rHWs763oOMeepbpnsCW0.E7_wE1PnqNX7v6plQT8fbJNaRfepEaG43JeU4lumWYk",
+      "https://00.img.avito.st/image/1/1.38FGLLa-cyhQjNEpdC-E4QONcS70m3co9PwSIvgvcorzj3E.jmHzmfCLlLtlfgqOwYnIQuXKh25uJPNa9nf1EcCFT08?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://20.img.avito.st/image/1/1.1Aqr9ra-eOO9Vtrij_WJKu5XeuUZQXzjGSYZ6RX1eUEeVXo.6d-G4X4fA4nSDK7NEumH3yqllEfSRkOlHiyTH1New38?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://30.img.avito.st/image/1/1.ym80BLa-ZoYipMSHLHvsT3GlZICGs2KGhtQHjIoHZySBp2Q.5xY-a6DoTilWs_dVozVD_kCrvJvBdSmE7daNitOoMCQ?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 19375,
+    "desc": "2-к. квартира, 74 м², 4 кровати",
+    "street": "Пушкарская ул., 17"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/kvartira-studiya_35_m_2_krovati_2816904350?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://20.img.avito.st/image/1/1.ht1x17a-KjRnd4g1cdnAjkN1KDLDYC40wwdLPs_UK5bEdCg.fiBGAFNB32WCAtg_RaQYl5mViIsKCg-QnTAGProvahY?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://50.img.avito.st/image/1/1.x6FNn7a-a0hbP8lJT7yL53Q-aU7_KG9I_08KQvOcaur4PGk.7OW1wum58ss4-ind3ZmVnZrvpZS1zbOKVLJI9LqE12o",
+      "https://00.img.avito.st/image/1/1.ncWlSba-MSyz6ZMtk2vpvefoMyoX_jUsF5lQJhtKMI4Q6jM.jBX7FsV09xaJH34H_YesYarsjeYo0ggh-bDtV_mGWI8?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://50.img.avito.st/image/1/1.IDZk9ra-jN9yVi7eKP4NZmBUjtnWQYjf1ibt1dr1jX3RVY4.HWL3K-oSslqhcuQxlIUO4Gb2sLBDhHDwLvurd2wLOso",
+      "https://90.img.avito.st/image/1/1.BdqgtLa-qTO2FAsypuh0nJYWqzUSA60zEmTIOR63qJEVF6s.xs1q7eyiT3GfSg3TTWo8V-FcqwnsC4Wwfv8lxQzLnKk"
+    ],
+    "price": 6000,
+    "desc": "Квартира-студия, 35 м², 2 кровати",
+    "street": "б-р Всполье, 13"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_50_m_2_krovati_5026210722?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://60.img.avito.st/image/1/1.mAcT8La-NO4FUJbvL_LrWFBRNuihRzDuoSBV5K3zNUymUzY.R_iHLfcirJWF0668_gNKRqZdLgEu7iGTWx1NLJDMRMc",
+      "https://00.img.avito.st/image/1/1.yGsgg7a-ZII2I8aDPLS9bzoiZoSSNGCCklMFiJ6AZSCVIGY.Qickysl07pDsZ0QbsQp2TbOrlooKSF8ekuQ-bBj6JOE?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://40.img.avito.st/image/1/1.RaCHuba-6UmRGUtIgcg45oEY6081Du1JNWmIQzm66OsyGus._IawPGs7A5GpM2AxG20-tbyxSFWL9kVYLqNNHiBQSyY",
+      "https://00.img.avito.st/image/1/1.pRoKpra-CfMcBqvyTKyzNRAHC_W4EQ3zuHZo-bSlCFG_BQs.bCUSl8zNMNw4HpG56OWqEwRtM-3O4BiZD0dlkXEEgig?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://20.img.avito.st/image/1/1._RXCpra-UfzUBvP9tMnkOtgHU_pwEVX8cHYw9nylUF53BVM.JcNxrnZ43TQwo6Uhdk8QiiakeOEHoedCefr23q-nQnI?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 3800,
+    "desc": "2-к. квартира, 50 м², 2 кровати",
+    "street": "ул. Гоголя, 11"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_37_m_2_krovati_8255152023?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://50.img.avito.st/image/1/1.0Adujba-fO54Ld7vQtqsGHMtfujcOnju3F0d5NCOfUzbLn4.YvJesPQ_uG_dymDQ36nEThPdYigoQaw5ECzGSACgXTA",
+      "https://40.img.avito.st/image/1/1.jaOvwba-IUq5YYNLuZuiw4BhI0wddiVKHRFAQBHCIOgaYiM.8qwBBWi_eETRJ4eDSP779f6Pzqr7c2FxmGDomL0wdh8",
+      "https://00.img.avito.st/image/1/1.VNSSE7a--D2Es1o8tmJNsL2z-jsgpPw9IMOZNywQ-Z8nsPo.ruFv6ewCwSj2cOeb3PXqrRwZ4wHIoA5iTpl5oidFITA?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://60.img.avito.st/image/1/1.ZNKqE7a-yDu8s2o67lpxtoWzyj0YpMw7GMOpMRQQyZkfsMo.Mmsd7LSPm9OJuyOyTUbuQMKaQ9-69hsgbqNpMKJs-aA",
+      "https://20.img.avito.st/image/1/1.gX2jzra-LZS1bo-VrfSwG4xuL5IReSmUER5Mnh3NLDYWbS8.P_34kZhQ9KARy5hNMhNIdd-sXTOYasqN5A5fFt4_G_I?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 7000,
+    "desc": "1-к. квартира, 37 м², 2 кровати",
+    "street": "Советская ул., 65"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_44_m_3_krovati_4185194624?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://c90.img.avito.st/image/1/1.45ex7ra-T36nTu1_-9GFjZZOTXgDWUt-Az4udA_tTtwETU0.3wPw3cBWPZbzWWnTBGriaylSSHYPJWCFNYYldXphiro",
+      "https://c80.img.avito.st/image/1/1.ifODrba-JRqVDYcbnbuP9qQNJxwxGiEaMX1EED2uJLg2Dic.ROAoyBUGqBwNSSFEev-yl-5AadqQ_Z2TODHpATDFV7Q",
+      "https://30.img.avito.st/image/1/1.PbJYKLa-kVtOiDNaLjg0pX-Ik13qn5Vb6vjwUeYrkPnti5M.kl03wjbwZUJrZVn-1Beh4bQ1UJ0Pm4NPq6JADCGtC9k?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://10.img.avito.st/image/1/1.Q2b30La-74_hcE2O_fV4YtBw7YlFZ-uPRQCOhUnT7i1Cc-0.BYTih1YlLZfTYdyyevXd5nLOR1qnZ7xhuAPsBQKGEuI?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://10.img.avito.st/image/1/1.i-D7xra-JwntZoUI4fiu9txmJQ9JcSMJSRZGA0XFJqtOZSU.Nl6JIOtbF1rlN0EaNg15cZQ4As8_qLT7GP-jWsKIeko?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 5100,
+    "desc": "2-к. квартира, 44 м², 3 кровати",
+    "street": "Советская ул., 8"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_55_m_2_krovati_7770106515?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://10.img.avito.st/image/1/1.KS16Wra-hcRs-ifFJDpSFiP7h8LI7YHEyIrkzsRZhGbP-Yc.DA6YBs_o7znYEpZFHSiQ3PpQYAKaEmi1gthi7G9GN-0?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://00.img.avito.st/image/1/1.hF3Raba-KLTHyYq11Qv2ZojIKrJj3iy0Y7lJvm9qKRZkyio.AYpZiy-cyQ8LUDkOWp8ouGiw_wXz9Puj9bSx__aPSW8?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://10.img.avito.st/image/1/1.ibD6oba-JVnsAYdY5K_LlKMAJ19IFiFZSHFEU0SiJPtPAic.L7hoyD665gn43kOxxFaoQWGWJ6v7CHaCivYBW_1ke6Y?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://c60.img.avito.st/image/1/1.-FVRM7a-VLxHk_a9LQiIFQiSVrrjhFC84-M1tu8wVR7kkFY.g_FMN2d7WM-q1-u6tY3Ycop4qKoj8a3uDihVm1oRBoY",
+      "https://90.img.avito.st/image/1/1.Hu5kO7a-sgdymxAGVCdXyj2asAHWjLYH1uvTDdo4s6XRmLA.-_U_C4s72BD6iQQSjvJgrQzh4dHMfGsr5WN7vo2YLE0"
+    ],
+    "price": 7000,
+    "desc": "2-к. квартира, 55 м², 2 кровати",
+    "street": "Советская ул., 23"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_40_m_3_krovati_7311123004?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wH1AAr_YTo2OntzOjc6ImNoZWNrSW4iO3M6MTA6IjIwMjYtMTEtMjEiO3M6ODoiY2hlY2tPdXQiO3M6MTA6IjIwMjYtMTEtMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6InhramFsQnBQRUxubkhqOVciO30O63j49QAAAA&checkIn=2026-11-21&checkOut=2026-11-22",
+    "photos": [
+      "https://80.img.avito.st/image/1/1.pakGJLa-CUAQhKtBQCqAg06FC0a0kw1AtPRoSrgnCOKzhws.xCEtKhKHudpYQozNfru0sgJ0PbyPOoey8AZiAfQahJ0",
+      "https://00.img.avito.st/image/1/1.siy_E7a-HsWps7zE1ynRT_SyHMMNpBrFDcN_zwEQH2cKsBw.YVvdR9cJcgSYB4DYYqJYVIPUKFUplDFIaWjm41iuaBo?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://20.img.avito.st/image/1/1.g8o_fra-LyMp3o0iNQyTqnTfLSWNySsjja5OKYF9LoGK3S0.vAYzGeKksPWH5acQmopzZpwScvicZgRtw5evxHvUfGg?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://c80.img.avito.st/image/1/1.0WxsqLa-fYV6CN-EQq_LOCQJf4PeH3mF3ngcj9KrfCfZC38.WTZiBEEmgWWbcQR2Vm7_J0YMe1Ur8-ecY4TgyvKQSa8",
+      "https://c70.img.avito.st/image/1/1.0pt-gra-fnJoItxzVt3RzzYjfHTMNXpyzFIfeMCBf9DLIXw.VRp6LQQ5PcT0TuYtAORgX0X_9fcq6EHIKlTrcddm2QE"
+    ],
+    "price": 7800,
+    "desc": "1-к. квартира, 40 м², 3 кровати",
+    "street": "б-р Всполье, 33"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_43_m_3_krovati_8575274828?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [
+      "https://c80.img.avito.st/image/1/1.ecFXf7a-1ShB33cpKUoDuVff1y7lyNEo5a-0Iul81Iri3Nc.SBoPUs7D4R2ff4Fa5toZ_AKXOYB9QTWSpWcqRCn3sdE",
+      "https://20.img.avito.st/image/1/1.VdBBBba--TlXpVs4ZygJuFWl-z_zsv0589WYM_8G-Jv0pvs.s7BPCZv_nmIyO3TNVQYsb1y9BdH14L56F7xazwqZPYk?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://c90.img.avito.st/image/1/1.Qr6O2ra-7leYekxWhtsZoo577FE8bepXPAqPXTDZ7_U7eew.uDXUpjGHuIKs2gTLn26oY5LJ_hUJ1G13Fo7DVZH8Tro",
+      "https://40.img.avito.st/image/1/1.kvNVw7a-PhpDY5wbfa35txliPBzndDoa5xNfEOvAP7jgYDw.3IVh864GX8xH0PWROpD_sO5WrAY-rn7382XdyUOQn00",
+      "https://20.img.avito.st/image/1/1.tDiuvLa-GNG4HLrQyvbjULocGtccCxzRHGx52xC_GXMbHxo.kAyKMeLbyRwQ4--Qec4nbWblcTR1XsVXZtMtaUVaC54?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 9900,
+    "desc": "2-к. квартира, 43 м², 3 кровати",
+    "street": "Советская ул., 3"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_48_m_2_krovati_7813953099?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [
+      "https://40.img.avito.st/image/1/1.tOI2jra-GAsgLroKUvTT4HQvGg2EORwLhF55AYiNGamDLRo.uIK1JXkDFMH1ANq0aMZgICTdKNiOp9mtkqiF6dgSV20",
+      "https://c70.img.avito.st/image/1/1.RZGlo7a-6XizA0t5o8oik-cC634XFO14F3OIchug6NoQAOs.75RhQewAcKJMxkslOwVytJseLNFcwd7vtL7HQk4C-1U",
+      "https://40.img.avito.st/image/1/1.OHPyM7a-lJrkkzabji9XcbCSlpxAhJCaQOP1kEwwlThHkJY.-A3ad8IiSr_AQ5C2qlQJNSAtWfqQHEorw4zZqy6_LnM",
+      "https://30.img.avito.st/image/1/1.snoGt7a-HpMQF7ySbuWNT0UWHJW0ABqTtGd_mbi0HzGzFBw.nZWXMA9hqoWXvp-ZYG4AHZFkQWhe64u3yMwhKjzt7hg?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://50.img.avito.st/image/1/1.w3Ge87a-b5iIU82ZlOCCfdxSbZ4sRGuYLCMOkiDwbjorUG0.DVOXD7G7CYfSAHFyzLMxTBUuhPvipf0TyP4luQk69Ko"
+    ],
+    "price": 5000,
+    "desc": "1-к. квартира, 48 м², 2 кровати",
+    "street": "б-р Всполье, 13"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_42_m_3_krovati_4151552092?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [
+      "https://10.img.avito.st/image/1/1.SdlW4ba-5TBAQUcxSKAN9SRA5zbkVuEw5DGEOuji5JLjQuc.N3Qdbs0dJaBdiAaGB3Znody2xk8Sw43qn0ARF1z9q14?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://c80.img.avito.st/image/1/1.4MhrU7a-TCF98-4gJ1j85BnyTifZ5Egh2YMtK9VQTYPe8E4.CQpM6HVEuS0m3Z7C-mprW6FyZeiq_cKQEPEfUWMZdmU",
+      "https://70.img.avito.st/image/1/1.LpxNY7a-gnVbwyB0HVt2vz_CgHP_1IZ1_7Pjf_Ngg9f4wIA.Vm0uxM-LUOs9fbWLFgH2crfzvJ5n0n0TlMEXwcPXF4A",
+      "https://80.img.avito.st/image/1/1.4uxWH7a-TgVAv-wEHmT1zyS-TAPkqEoF5M8vD-gcT6fjvEw.nVW1OggfIYqhFcTcThp8dwXT05dbXNvLc-2qvzswdAA",
+      "https://20.img.avito.st/image/1/1.de__dba-2Qbp1XsHmUhbw43U2wBNwt0GTaW4DEF22KRK1ts.w_d8U8KJ_AuTypcIjY978vLNZicW2krkCYxTOfelvtY?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 5200,
+    "desc": "1-к. квартира, 42 м², 3 кровати",
+    "street": "б-р Всполье, 35"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/3-k._kvartira_80_m_5_krovatey_2626633131?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [
+      "https://c60.img.avito.st/image/1/1.PoHFVLa_kmjT9DBptVxGggL3lG5n8ZJuAJSYYtP0MGlz9w.38BDBuDlnGD9MWR9JYBNSqUrTKLXuQUlhxGZTBytMwY",
+      "https://30.img.avito.st/image/1/1.xguh-7a-auK3W8jjofChIYBbaOQTTG7iEysL6B_4a0AUWGg.4kt3o19AJocdkqh1ywt9iBiLbKDw6LsQVZ5XSmfpj9E?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://30.img.avito.st/image/1/1.i_RxEra_Jx1nsoUcazyriLyxIRvTtycbtNItF2eyhRzHsQ.EiLO1pXW17B4dCnmms9GqekWiKcuOAHCNXSRV9Hedos?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://30.img.avito.st/image/1/1.D3dvt7a-o555FwGffds6G2gWoZjdAKee3WfClNG0ojzaFKE.dtD8XbdjhFKhCOc9nYEG5n0MXghhw1NRPGGK1LtksPE?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://30.img.avito.st/image/1/1.i7BH0ba-J1lRcYVYXfv6rVxwJV_1ZiNZ9QFGU_nSJvvyciU.5AVAktKSE-dHvBCVIKDqpcL786H6hLR0ulU9ZW1My48?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 8000,
+    "desc": "3-к. квартира, 80 м², 5 кроватей",
+    "street": "ул. Ленина, 46А"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_45_m_2_krovati_2001797833?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [
+      "https://b00.img.avito.st/image/1/1.ohLD-ra-DvvVWqz6i_C5b4NbDP1xTQr7cSpv8X35D1l2WQw.krdpwevi9zvrNdk5WoCnXHES2edGzkFJiBt31MV6NOc?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://c60.img.avito.st/image/1/1.2cF5rLa-dShvDNcpR4POvDkNdy7LG3Eoy3wUIsevdIrMD3c.GCM5_K_yMX-gKyh61K0dStFp4ILaVDabpz5tbwlip8k",
+      "https://50.img.avito.st/image/1/1.3REWZra-cfgAxtP5IE3_dFbHc_6k0XX4pLYQ8qhlcFqjxXM.o5rOYiVR_NlfXBqs_N_ALBA6NBMMaW6Nq7h7KLnGmXs",
+      "https://30.img.avito.st/image/1/1.kB-j-La-PPa1WJ73j-6JbeNZPvARTzj2EShd_B37PVQWWz4.GNiDu_LsbAANRIr3LpNauxX40okFQbdsfBLBQRyF3KA?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://00.img.avito.st/image/1/1.zoslp7a-YmIzB8BjNeCxpiMGYGSXEGZil3cDaJukY8CQBGA.RYDf6gPS7h9ujjTlQTrc77_qeIvtojVR-dtQUIpNGKE?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 6000,
+    "desc": "2-к. квартира, 45 м², 2 кровати",
+    "street": "ул. Ленина, 5"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_36_m_2_krovati_7805240656?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [
+      "https://c90.img.avito.st/image/1/1.4rOIdra-Tlqe1uxbwBWaz8jXTFw6wUpaOqYvUDZ1T_g91Uw.sxVwkg4Tg_qMX5_58TTqdNdjo_DUBGDylbdYYSVlrto",
+      "https://70.img.avito.st/image/1/1.8GOccra-XIqK0v6L8D3NTdLTXowuxViKLqI9gCJxXSgp0V4.JU2GiFV-aZIzWWZoenXVqw1Z20WX0ZhG3p0wsg0A-ZE",
+      "https://60.img.avito.st/image/1/1.xcWk27a-aSyye8stooSMked6ayoWbG0sFgsIJhrYaI4ReGs.q7ujGX58suX62LYK6PwyfSlE5ZEwxPTuKgntqhonbmo",
+      "https://90.img.avito.st/image/1/1.RbnyTba-6VDk7UtR9DBMlLHs61ZA-u1QQJ2IWkxO6PJH7us.kwPWuTyHQkXFQJcXKAB7odU4-Gv22SU514pefXv97SQ",
+      "https://20.img.avito.st/image/1/1.zbaJWba-YV-f-cNen3KVqMr4Y1k77mVfO4kAVTdaYP08-mM.cMSKRt3SAtLoHZhLH15DXpl3zZNPol5JWorOJOjXlX4?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 4500,
+    "desc": "1-к. квартира, 36 м², 2 кровати",
+    "street": "ул. Гоголя, 27"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_60_m_4_krovati_7969744832?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [
+      "https://10.img.avito.st/image/1/1.J7-Qo7a-i1aGAylX0t9Bq9gCiVAiFI9WInPqXC6givQlAIk.dfHKUi1UycOqXcVAvwhF7hpiktHA6LtfeON_Goyas8g?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://00.img.avito.st/image/1/1.ZQPEmba-yerSOWvrgvRqUuY5y-x2Ls3qdkmo4HqayEhxOss.oZQ8criZkNb_acXAZSwIoBlV9i0sdHaP0Vhx5fMCOyQ?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://c80.img.avito.st/image/1/1.fePv3ra-0Qr5fnMLmY9n9aR_0wxdadUKXQ6wAFHd0KhafdM.Zmc93nREGB5LoNYEtg2etdHt-XXwonqIRFGkre_-WCs",
+      "https://50.img.avito.st/image/1/1.q6YRY7a-B08Hw6VOS02lpFvCBUmj1ANPo7NmRa9gBu2kwAU.WyOg_QHIgsABoFwbRPzdeg6C_jrgqmIlZLIaXFnehec",
+      "https://40.img.avito.st/image/1/1.bVx7K7a-wbVti2O0LTpHFzOKw7PJnMW1yfugv8UowBfOiMM.9svhzHLU66XJhFetBDxKnxHwxUokjYhj1xLwRoUpAec"
+    ],
+    "price": 9000,
+    "desc": "2-к. квартира, 60 м², 4 кровати",
+    "street": "Советская ул., 61"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_59_m_3_krovati_2474968425?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 8000,
+    "desc": "2-к. квартира, 59 м², 3 кровати",
+    "street": "б-р Всполье, 28"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_59_m_2_krovati_2252601178?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 6958,
+    "desc": "2-к. квартира, 59 м², 2 кровати",
+    "street": "б-р Всполье, 34"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_60_m_2_krovati_4701064822?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 7230,
+    "desc": "1-к. квартира, 60 м², 2 кровати",
+    "street": "ул. Иринина, 13А"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_38_m_3_krovati_3844016134?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 6300,
+    "desc": "1-к. квартира, 38 м², 3 кровати",
+    "street": "б-р Всполье, 33"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_41_m_2_krovati_8169501279?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 3806,
+    "desc": "2-к. квартира, 41 м², 2 кровати",
+    "street": "б-р Всполье, 27"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_45_m_3_krovati_1165768371?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 3500,
+    "desc": "2-к. квартира, 45 м², 3 кровати",
+    "street": "Советская ул., 21"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_42_m_2_krovati_738897849?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 5445,
+    "desc": "2-к. квартира, 42 м², 2 кровати",
+    "street": "Советская ул., 28"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_35_m_2_krovati_7778830217?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 7080,
+    "desc": "1-к. квартира, 35 м², 2 кровати",
+    "street": "ул. Ленина, 23"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_68_m_3_krovati_7805789462?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 10500,
+    "desc": "2-к. квартира, 68 м², 3 кровати",
+    "street": "б-р Всполье, 39с1"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_32_m_2_krovati_2293954538?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 3900,
+    "desc": "1-к. квартира, 32 м², 2 кровати",
+    "street": "Советская ул., 9"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_52_m_2_krovati_2166006529?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 4200,
+    "desc": "2-к. квартира, 52 м², 2 кровати",
+    "street": "б-р Всполье, 11"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_40_m_3_krovati_2009592116?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 6000,
+    "desc": "1-к. квартира, 40 м², 3 кровати",
+    "street": "б-р Всполье, 36"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_49_m_3_krovati_2151724966?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 7900,
+    "desc": "2-к. квартира, 49 м², 3 кровати",
+    "street": "Советская ул., 58"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/kvartira-studiya_25_m_1_krovat_7356302559?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 7230,
+    "desc": "Квартира-студия, 25 м², 1 кровать",
+    "street": "ул. Иринина, 13А"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/3-k._kvartira_41_m_3_krovati_7506911504?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 6000,
+    "desc": "3-к. квартира, 41 м², 3 кровати",
+    "street": "Советская ул., 32"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_43_m_2_krovati_7487320570?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 10000,
+    "desc": "2-к. квартира, 43 м², 2 кровати",
+    "street": "Советская ул., 14"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_40_m_2_krovati_3966351674?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 3750,
+    "desc": "1-к. квартира, 40 м², 2 кровати",
+    "street": "Советская ул., 34"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_30_m_2_krovati_2142327338?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 5280,
+    "desc": "1-к. квартира, 30 м², 2 кровати",
+    "street": "Советская ул., 43"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_40_m_2_krovati_3966566460?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 3750,
+    "desc": "1-к. квартира, 40 м², 2 кровати",
+    "street": "Советская ул., 58"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/3-k._kvartira_75_m_3_krovati_4243196613?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 6000,
+    "desc": "3-к. квартира, 75 м², 3 кровати",
+    "street": "б-р Всполье, 10"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_53_m_2_krovati_7890327166?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 5500,
+    "desc": "1-к. квартира, 53 м², 2 кровати",
+    "street": "ул. Ленина, 27"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_42_m_4_krovati_8328732812?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 5500,
+    "desc": "2-к. квартира, 42 м², 4 кровати",
+    "street": "б-р Всполье, 27"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_554_m_3_krovati_8028563536?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 7000,
+    "desc": "2-к. квартира, 55,4 м², 3 кровати",
+    "street": "Советская ул., 65"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_30_m_2_krovati_7811643165?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 4900,
+    "desc": "1-к. квартира, 30 м², 2 кровати",
+    "street": "Советская ул., 5"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_30_m_1_krovat_2786563269?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 5000,
+    "desc": "1-к. квартира, 30 м², 1 кровать",
+    "street": "Советская ул., 39"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_39_m_3_krovati_8102884206?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 7200,
+    "desc": "1-к. квартира, 39 м², 3 кровати",
+    "street": "Советская ул., 65"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_44_m_4_krovati_8158233383?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 8000,
+    "desc": "2-к. квартира, 44 м², 4 кровати",
+    "street": "Советская ул., 18"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_60_m_2_krovati_7249225257?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 12980,
+    "desc": "1-к. квартира, 60 м², 2 кровати",
+    "street": "б-р Всполье, 21"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_45_m_2_krovati_7234321411?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 7000,
+    "desc": "1-к. квартира, 45 м², 2 кровати",
+    "street": "б-р Всполье, 33"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_50_m_2_krovati_7869182923?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 8500,
+    "desc": "1-к. квартира, 50 м², 2 кровати",
+    "street": "б-р Всполье, 39с1"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_36_m_1_krovat_8028844209?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjVxM0owMlVVRGVkQThMYjYiO31NX3t-7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 5800,
+    "desc": "1-к. квартира, 36 м², 1 кровать",
+    "street": "Советская ул., 65"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_50_m_2_krovati_7773860934?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjNkNEJVN1ZybWtibnBUSUMiO33bPMOc7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [
+      "https://c60.img.avito.st/image/1/1.G1lYiLa-t7BOKBWxYoAQaBwptbbqP7Ow6ljWuuaLthLtK7U.p-lKCW9uTwMXHj3gKU8T9lYyeEt2oX_W1h2WeByNT00",
+      "https://60.img.avito.st/image/1/1.qLlav7a-BFBMH6ZRBqmSiR4eBlboCABQ6G9lWuS8BfLvHAY.gZvsJy3b5KK_Mo4BiLVzAn6Amv9VWOFPvCjGUFkKxec",
+      "https://c60.img.avito.st/image/1/1.ZEobZra-yKMNxmqiXx9AeF_HyqWp0cyjqbapqaVlyQGuxco.4hjiXtmO8lJe-lWJhjPZXg_Ct11AsCQqQuwp90XcWYA",
+      "https://50.img.avito.st/image/1/1.C25Imba-p4deOQWGUp1iNWc5pYH6LqOH-knGjfaapiX9OqU.t0f8XfbKT7wzJ5MaUJ-Fi-nLM-OXsHpbVeCzN1rYWkI",
+      "https://70.img.avito.st/image/1/1.GbqOFLa-tVOYtBdSsEgLiMq1t1U8o7FTPMTUWTAXtPE7t7c.-W7c9IOwQLUn0Avug29EG6bZ0mzfiMa0NSeV5A_4fgI"
+    ],
+    "price": 9000,
+    "desc": "1-к. квартира, 50 м², 2 кровати",
+    "street": "б-р Всполье, 39с1"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_30_m_2_krovati_7843347500?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjNkNEJVN1ZybWtibnBUSUMiO33bPMOc7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [
+      "https://20.img.avito.st/image/1/1.qfW_ara-BRypyqcd4XCu8qfKBxoN3QEcDbpkFgFpBL4KyQc._PH1kBueTqG7hTntjMIG_YJrY4fYcRhZtPqCMZ-J2Fc?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://10.img.avito.st/image/1/1.AVnwgra-rbDmIg-x_uZCS7Ijr7ZCNamwQlLMuk6BrBJFIa8.r-ITHbPbSeA2cl3GBmVdo76cC_Frejp6ZxBE4JlEEOk?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://20.img.avito.st/image/1/1.Z0ugJba-y6K2hWmj4lwAWuKEyaQSks-iEvWqqB4mygAVhsk.pfJYkswm2aY3lecUb4f28BZpjTg1xPMcQsD4z_OxDHs?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://70.img.avito.st/image/1/1.F78jAra-u1Y1ohlXAX51tmCjuVCRtb9WkdLaXJ0BuvSWobk.5lUs1juJVPSR3ZLrZcyn9pbPvAYPgtmoBMaLElaTrQk",
+      "https://40.img.avito.st/image/1/1.7ZGpXba-QXi__eN5_zb0iuv8Q34b6kV4G40gchdeQNoc_kM.GM1ujnX3I8xfhobyPZTKTGjdpPvNdgbYEbH6ePvcYhA"
+    ],
+    "price": 5000,
+    "desc": "1-к. квартира, 30 м², 2 кровати",
+    "street": "Лоунская ул., 6"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/2-k._kvartira_485_m_2_krovati_7855556205?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjNkNEJVN1ZybWtibnBUSUMiO33bPMOc7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [
+      "https://50.img.avito.st/image/1/1.mrpp3ba-NlN_fZRSUdeSz199NFXbajJT2w1XWdfeN_HcfjQ.1D_tYnbhnLOzPXCoWijcAXexwOSy3c4tRXJ2qTf7xNc",
+      "https://80.img.avito.st/image/1/1.tJAoFra-GHk-trp4THTu2mm3Gn-aoRx5msZ5c5YVGdudtRo.wrIlaniR1H9SEUOkrA1E1ibzQuFHn8MEHXTUwN5RUms",
+      "https://50.img.avito.st/image/1/1.U6uKB7a-_0Kcp11DoFYk3byn_UQ4sPtCONeeSDQE_uA_pP0.U_3lFcyO75aegUz_5mQ4CSZbAF1u--YgwCpZvML72M4",
+      "https://50.img.avito.st/image/1/1.czajaLa-39-1yH3eyQVRfOLJ3dkR39vfEbi-1R1r3n0Wy90.8ir-ULJn5QxzRsZhsZoxnnRy97K6O5W3khnnM7EjdQk",
+      "https://20.img.avito.st/image/1/1.-_mdfba-VxCL3fUR526YstzcVRYvylMQL602GiN-VrIo3lU.zjG-M5oKyrRCL1fyXr06AuM7Tm1JHe-jUW6x7v6w9lY?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 7500,
+    "desc": "2-к. квартира, 48,5 м², 2 кровати",
+    "street": "Советская ул., 52"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_44_m_2_krovati_4283176620?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjNkNEJVN1ZybWtibnBUSUMiO33bPMOc7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [
+      "https://10.img.avito.st/image/1/1.6ChZBLa-RMFPpObABS_7dzKmRsfrs0DB69Qly-cHRWPsp0Y.ONOidF-q8FdiZ4767jizORKwIrME-uyGBFgWRQIFb2g?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://10.img.avito.st/image/1/1.8htNSra-XvJb6vzzJWHhRCboXPT__Vry_5o_-PNJX1D46Vw.dfntk4n-dyFpC-Zu82DRGMC4NhixMb3x3X7ARQVfbn8?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://20.img.avito.st/image/1/1.QChZBLa-7MFPpE7AVS1TdzKm7sfrs-jB69SNy-cH7WPsp-4.8AN5IujYyLXNd-MsCKG_6zMV5VMoQh8gEXeg423ugrk?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://c60.img.avito.st/image/1/1.vJeIWba-EH6e-bJ__HOvyOP7Eng67hR-OolxdDZaEdw9-hI.96GRFW-B-YV1wtpC4keSTKfa0sYs1eipRO_NljtZLBs",
+      "https://00.img.avito.st/image/1/1.-zhXVLa-V9FB9PXQLX_oZzz2Vdfl41PR5YQ22-lXVnPi91U._tivecv8w7QkghwwqFLml4PORbK2oKYkknKWEYMjjgw?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs="
+    ],
+    "price": 5000,
+    "desc": "1-к. квартира, 44 м², 2 кровати",
+    "street": "б-р Всполье, 19"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/3-k._kvartira_57_m_3_krovati_7502202432?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjNkNEJVN1ZybWtibnBUSUMiO33bPMOc7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [
+      "https://80.img.avito.st/image/1/1._-wdGba-UwULufEEbxqGmAy5UQOvrlcFr8kyD6MaUqeoulE.mi5O99MMefpPA-9BFPihNG5xcapltYF-X8t3Ka5hOt8",
+      "https://c70.img.avito.st/image/1/1.Nwyptra-m-W_Fjnky95MB_IXmeMbAZ_lG2b67xe1mkccFZk.0P22OKBZknN6X1fulAG4lc2CQKRmYQOgw0wuEGQxnsg",
+      "https://c90.img.avito.st/image/1/1.rmFFVra-AohT9qCJFVTWah73AI734QaI94ZjgvtVAyrw9QA.2yTm3CQ3pcjF1YpxHPElpRaKFWClpMwxRNHnFZCRoLE",
+      "https://00.img.avito.st/image/1/1.8UoaBba-XaMMpf-idGbcW3ikX6WoslmjqNU8qaQGXAGvpl8.5jZu4LdEzyZvcGRURcWkap5vO_TEVcKhqK9lY_4Gf18?cqp=2.6_1L9vhKD2uBLt-qyrAoZheVsuS8u7cVFre6r7a9jrN4_pCIDjlm5anolzs-MLkTK_L9899P2epdVNs=",
+      "https://c90.img.avito.st/image/1/1.6Ltvdra-RFJ51uZTM3W1qQ3XRlTdwUBS3aYlWNF1RfDa1UY.Ns1N5x49q-tJ0BWmLIK56eRyFAe3iKSPeZDlnwWxUiQ"
+    ],
+    "price": 12500,
+    "desc": "3-к. квартира, 57 м², 3 кровати",
+    "street": "Советская ул., 2"
+  },
+  {
+    "url": "https://www.avito.ru/suzdal/kvartiry/1-k._kvartira_46_m_2_krovati_4049140081?checkIn=2026-11-21&checkOut=2026-11-22&guests=2&guestsDetailed=%7B%22totalCount%22%3A2%2C%22adultsCount%22%3A2%2C%22version%22%3A1%7D&context=H4sIAAAAAAAA_wHvABD_YTo2OntzOjc6ImNoZWNrSW4iO3M6ODoiMjAyNjExMjEiO3M6ODoiY2hlY2tPdXQiO3M6ODoiMjAyNjExMjIiO3M6MTE6Imd1ZXN0c0NvdW50IjtpOjMwMjI0MTQ7czoxNDoiZ3Vlc3RzRGV0YWlsZWQiO3M6NTg6InsidmVyc2lvbiI6MSwidG90YWxDb3VudCI6MiwiYWR1bHRzQ291bnQiOjIsImNoaWxkcmVuIjpbXX0iO3M6MTM6ImxvY2FsUHJpb3JpdHkiO2I6MDtzOjE6IngiO3M6MTY6IjNkNEJVN1ZybWtibnBUSUMiO33bPMOc7wAAAA&checkIn=20261121&checkOut=20261122",
+    "photos": [],
+    "price": 5000,
+    "desc": "1-к. квартира, 46 м², 2 кровати",
+    "street": "ул. Гоголя, 45"
+  }
+];

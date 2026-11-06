@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1376b7">
+<meta name="description" content="Угадай цену ночи в Суздале по фотографиям реальных объявлений. 10 лотов, немного ностальгии и никаких рабочих созвонов.">
+<title>Суздаль-квиз — сколько стоит сбежать на выходные?</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231376b7'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='14' font-weight='bold' fill='%23fff' text-anchor='middle'%3EСК%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topline" aria-hidden="true"></div>
+
+<header class="header">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true">◆</span>
+    <span class="brand-name">Суздаль<b>·квиз</b></span>
+  </div>
+  <span class="header-tag">Режим жизни</span>
+</header>
+
+<!-- Прогресс: 10 лотов -->
+<div id="progress" class="progress hidden">
+  <div class="progress-cells" id="progressCells" aria-hidden="true"></div>
+  <div class="progress-label" id="progressLabel">Лот 1 из 10</div>
+</div>
+
+<main class="main">
+
+  <!-- ЭКРАН 1: СТАРТ -->
+  <section id="screenStart" class="screen">
+    <div class="card hero">
+      <p class="eyebrow">Загрузка сохранения: Суздаль</p>
+      <h1 class="hero-title">Новая жизнь.<br>Хотя бы<br>на выходные.</h1>
+      <p class="lead">Помнишь, как строили идеальный дом в The Sims 3? Теперь выбираем квартиру на выходные в Суздале. Угадай цену за сутки. Motherlode здесь не работает — зато никаких созвонов.</p>
+
+      <div class="needs-panel" aria-label="Настроение перед поездкой"><div><span>Энергия</span><i class="need low"></i></div><div><span>Общение</span><i class="need medium"></i></div><div><span>Жажда выходных</span><i class="need full"></i></div></div><div class="wish"><span aria-hidden="true">✦</span> Желание: проснуться в Суздале и никуда не спешить.</div>
+      <div class="rules">
+        <h2 class="h-small">Задание на выходные</h2>
+        <ol class="rules-list">
+          <li><span class="rule-num">1</span><span><b>10 квартир в Суздале</b> из подборки. Ищем место для маленького побега.</span></li>
+          <li><span class="rule-num">2</span><span>Полистай фотографии и двигай <b>бегунок цены</b>. Калькулятор можно.</span></li>
+          <li><span class="rule-num">3</span><span>Жми <b>«Моя ставка»</b> — сравним с ценой из выгрузки. Без звонков агента.</span></li>
+        </ol>
+
+        <details class="score-details"><summary>Как считаются баллы</summary>
+        <table class="points-table">
+          <tr><td>Ошибка до 1%</td><th>100</th></tr>
+          <tr><td>до 3%</td><th>90</th></tr>
+          <tr><td>до 5%</td><th>80</th></tr>
+          <tr><td>до 10%</td><th>65</th></tr>
+          <tr><td>до 15%</td><th>50</th></tr>
+          <tr><td>до 25%</td><th>35</th></tr>
+          <tr><td>до 40%</td><th>15</th></tr>
+          <tr><td>больше 40%</td><th>0</th></tr>
+        </table></details>
+        <p class="muted">Максимум за раунд — <b>1000 баллов</b>. В финале узнаешь, кто ты: <b>Охотник за скидками</b>, <b>Суздальский инсайдер</b> или <b>Романтик с размахом</b>.</p>
+      </div>
+
+      <p id="bestLine" class="best hidden">Твой рекорд: <b id="bestValue">0</b> баллов</p>
+
+      <button id="btnStart" class="btn btn-primary btn-big">▶ Начать новую жизнь</button>
+      <p class="note muted">Цены за сутки — из подборки на 21–22 ноября 2026 года, для 2 гостей. Даты, сборы и условия могут менять итоговую стоимость.</p>
+    </div>
+  </section>
+
+  <!-- ЭКРАН 2: ЛОТ -->
+  <section id="screenRound" class="screen hidden">
+    <article class="card lot-card">
+
+      <div class="gallery-wrap">
+        <div id="gallery" class="gallery" aria-label="Фотографии квартиры"></div>
+        <button id="galPrev" class="gal-btn" type="button" aria-label="Предыдущее фото">‹</button>
+        <button id="galNext" class="gal-btn gal-btn-next" type="button" aria-label="Следующее фото">›</button>
+        <span id="galCounter" class="gal-counter">1/3</span>
+      </div>
+      <p class="photo-note muted">Фото из объявления. Если не загрузились, открой лот на Avito после ответа.</p>
+      <div id="galDots" class="dots" aria-hidden="true"></div>
+
+      <div class="lot-head">
+        <h2 id="lotTitle" class="lot-title">—</h2>
+        <p id="lotStreet" class="lot-loc">—</p>
+      </div>
+
+      <div id="guessBlock">
+        <div class="guess-row">
+          <span class="guess-caption">Твоя ставка за сутки</span>
+          <span id="guessValue" class="guess-value">—</span>
+        </div>
+        <input id="priceSlider" class="slider" type="range" min="1000" max="20000" step="100" value="7000" inputmode="none" aria-label="Твоя ставка за сутки, рублей">
+        <div class="scale-row"><span>1 000 ₽</span><span>20 000 ₽</span></div>
+        <button id="btnGuess" class="btn btn-primary btn-big">Моя ставка</button>
+      </div>
+
+      <div id="feedbackBlock" class="feedback hidden">
+        <p id="fbVerdict" class="fb-verdict">Цена за сутки из подборки</p>
+        <div id="fbReal" class="price-real">—</div>
+        <div class="diff-grid">
+          <div class="diff-cell">
+            <span class="diff-cap">Твоя ставка за сутки</span>
+            <b id="fbGuess">—</b>
+          </div>
+          <div class="diff-cell">
+            <span class="diff-cap">Разница</span>
+            <b id="fbDiff">—</b>
+          </div>
+          <div class="diff-cell">
+            <span class="diff-cap">Баллы</span>
+            <b id="fbPoints" class="pts">—</b>
+          </div>
+        </div>
+        <a id="fbLink" class="link" href="#" target="_blank" rel="noopener noreferrer">Посмотреть объявление на Avito →</a>
+        <button id="btnNext" class="btn btn-primary btn-big">Дальше</button>
+      </div>
+
+    </article>
+  </section>
+
+  <!-- ЭКРАН 3: ИТОГИ -->
+  <section id="screenFinal" class="screen hidden">
+    <div class="card">
+
+      <p class="eyebrow">Навык «Выбор жилья» прокачан</p>
+      <div id="finalScore" class="final-score">0<span class="of"> / 1000</span></div>
+      <div class="final-bar"><div id="finalBarFill" class="final-bar-fill"></div></div>
+      <p id="finalGrade" class="final-grade">—</p>
+
+      <div id="personaCard" class="persona">
+        <div id="personaEmoji" class="persona-emoji">🏠</div>
+        <h2 id="personaTitle" class="persona-title">—</h2>
+        <p id="personaText" class="persona-text">—</p>
+      </div>
+
+      <div class="stats-grid" id="finalStats"></div>
+
+      <h2 class="h-small">Что насмотрели за этот побег</h2>
+      <div id="roundsList" class="rounds-list"></div>
+
+      <button id="btnRestart" class="btn btn-primary btn-big">Загрузить ещё одни выходные</button>
+      <button id="btnShare" class="btn btn-ghost btn-big">Поделиться результатом</button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p><b>Суздаль-квиз</b> · маленький побег в Суздаль</p>
+  <p class="muted">Фото и цены — из предоставленной подборки Avito. Это снимок предложений, а не проверка их текущей доступности. Проект не связан с Avito.</p>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
